@@ -6,7 +6,7 @@ os.system('clear')
 
 #install python, pip and numpy
 print('------------- install pip, numpy and selenium -------------')
-os.system('sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get install -y python.pip && pip install numpy && pip install selenium ')
+os.system('sudo apt-get install -y python.pip && pip install numpy && pip install selenium ')
 
 """
 #install Selenium and chrome
