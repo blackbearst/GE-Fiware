@@ -3,12 +3,12 @@ import time
 
 os.system('clear')
 
-"""
+
 #install python, pip and numpy
-print('------------- install pip and numpy -------------')
+print('------------- install pip, numpy and selenium -------------')
 os.system('sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get install -y python.pip && pip install numpy && pip install selenium ')
 
-
+"""
 #install Selenium and chrome
 print('------------- install Selenium and chrome -------------')
 os.system('cd extras && chmod 777 install_selenium.sh && chmod 777 start-chrome.sh')
