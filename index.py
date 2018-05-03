@@ -29,7 +29,7 @@ os.system('sudo apt-get install -y linux-image-extra-$(uname -r) linux-image-ext
     sudo docker run hello-world')
  
 """
-#os.system('cd ge_fiware && mkdir report')
+os.system('cd ge_fiware && mkdir report && cd report && touch report.json')
 print('------------- install Selenium and Mongodb -------------')
 os.system('sudo docker-compose up -d')
 #os.system('sudo docker build -t mongo/ge_fiware_report . && sudo docker-compose up -d')
@@ -45,7 +45,7 @@ os.system('cd ge_fiware && cd KeyRock && python keyrock.py') #run KeyRock
 os.system('cd ge_fiware && cd Knowage && python knowage.py') #run Knowage
 os.system('clear')
 print('------------- import report mongodb -------------')
-os.system('cd ge_fiware/report && sudo docker cp report.json final_fiware_report_1:/ && sudo docker exec final_fiware_report_1 bash -c "mongoimport --db report_fiware --collection fiware --file report.json"')
+os.system('cd ge_fiware/report && sudo docker cp report.json gefiware_fiware_report_1:/ && sudo docker exec gefiware_fiware_report_1 bash -c "mongoimport --db report_fiware --collection fiware --file report.json"')
 print('------------- remove Selenium and Mongodb -------------')
 os.system('sudo docker-compose rm -s -f')
 print('------------- report json -------------')
