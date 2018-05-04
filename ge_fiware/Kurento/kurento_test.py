@@ -41,7 +41,7 @@ class kurento(unittest.TestCase):
 		buildKMS1 = buildKMS.replace("run","run -d --name kms -p 8888:8888")
 		os.system(buildKMS1)
 		print('-----------------------------------------------------------')
-		os.system('sudo docker ps')
+		os.system('sudo docker ps -l')
 		print('-----------------------------------------------------------')
 		time.sleep(5)
 		os.system(curl)
@@ -59,7 +59,7 @@ class kurento(unittest.TestCase):
 		host =  os.popen("hostname")
 		host_name = host.readline()
 
-		resultado = os.popen("docker ps").readlines()
+		resultado = os.popen("docker ps -l").readlines()
 		contenedor =[host_name,fecha,hora,version,resultado[1].split()[10],resultado[1].split()[0],resultado[1].split()[6]]
 		#print(version)
 		#print(contenedor)
