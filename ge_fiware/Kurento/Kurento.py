@@ -13,11 +13,12 @@ os.chdir('../')
 os.chdir('report')
 
 reporte = {
+			'GE-name' : "kurento",
 			'host_name' : report[6],
 			'execution_time' : test[2],
 			'test' : test[3], 
 			'date' : report[0],
-			'hour' : report[1],
+			'time' : report[1],
 			'version' : report[2],
 			'containers' : [{
 				'container_name' : report[3],
