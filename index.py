@@ -41,6 +41,7 @@ os.system('clear')
 os.system('cd ge_fiware && cd Kurento && python Kurento.py') #run KMS
 os.system('cd ge_fiware && cd Orion && python Orion.py') #run Orion
 os.system('cd ge_fiware && cd Wirecloud && python Wirecloud.py') #run Wirecloud
+os.system('cd ge_fiware && cd Wilma && python Wilma.py') #run Wilma
 os.system('cd ge_fiware && cd AuthzForce && python authzforce.py') #run AuthzForce
 os.system('cd ge_fiware && cd KeyRock && python keyrock.py') #run KeyRock
 os.system('cd ge_fiware && cd Knowage && python knowage.py') #run Knowage
