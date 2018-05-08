@@ -3,7 +3,6 @@ import json
 import os
 import time
 
-os.system('clear')
 print('------------- install Orion -------------')
 os.system('python Orion_test.py')
 report = np.genfromtxt('report.txt',delimiter=',',dtype=str)
