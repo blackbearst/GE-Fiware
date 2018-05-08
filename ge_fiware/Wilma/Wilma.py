@@ -3,7 +3,6 @@ import json
 import os
 import time
 
-os.system('clear')
 print('------------- install Wilma -------------')
 os.system('python wilma_test.py')
 report = np.genfromtxt('report.txt',delimiter=',',dtype=str)
