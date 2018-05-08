@@ -3,8 +3,6 @@ import json
 import os
 import time
 
-#os.system('touch report.txt && touch test.txt')
-os.system('clear')
 print('------------- install Kurento -------------')
 os.system('python kurento_test.py')
 report = np.genfromtxt('report.txt',delimiter=',',dtype=str)
