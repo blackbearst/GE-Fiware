@@ -1,0 +1,34 @@
+version: '2'
+services:
+
+  selenium-hub:
+    image: selenium/hub
+    ports:
+      - 4444:4444
+
+  chrome:
+    image: selenium/node-chrome
+    links:
+      - selenium-hub:hub
+    volumes:
+      - /dev/shm:/dev/shm 
+
+  python:  
+    build: .
+    links:
+      - selenium-hub:hub
+      - chrome:chrome
+    depends_on:
+     - selenium-hub
+     - chrome
+    volumes:
+      - ./ge_fifware
+    command: python index.py
+    
+  fiware_report: 
+    image: mongo
+    volumes: 
+      - ./ge_fiware/report:/data/db
+    ports: 
+      - 27017:27017
+
