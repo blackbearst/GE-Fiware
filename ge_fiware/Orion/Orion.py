@@ -11,7 +11,7 @@ os.chdir('../report')
 #os.chdir('report')
 
 reporte = {
-	'GE-name' : "kurento"
+	'GE-name' : "orion",
 	'host_name' : report[9],
 	'execution_time' : test[2],
 	'test' : test[3],	
