@@ -3,6 +3,8 @@ import json
 import os
 import time
 
+#os.system('touch report.txt && touch test.txt')
+os.system('clear')
 print('------------- install Kurento -------------')
 os.system('python kurento_test.py')
 report = np.genfromtxt('report.txt',delimiter=',',dtype=str)
@@ -11,18 +13,12 @@ os.chdir('../')
 os.chdir('report')
 
 reporte = {
-			'GE-name' : "kurento",
-			'host_name' : report[6],
+			'host_name' : report[3],
 			'execution_time' : test[2],
 			'test' : test[3], 
 			'date' : report[0],
-			'time' : report[1],
+			'hour' : report[1],
 			'version' : report[2],
-			'containers' : [{
-				'container_name' : report[3],
-				'container_ID' : report[4],
-				'status' : report[5]
-				}]
 			}
 with open('report.json','a') as file:
 			json.dump(reporte, file, indent=2)
@@ -39,4 +35,4 @@ print(reporte)
 time.sleep(2)
 
 #os.chdir('../')
-os.system('cd .. && cd Kurento && rm test.txt && rm report.txt') 
+#os.system('cd .. && cd Kurento && rm test.txt && rm report.txt') 

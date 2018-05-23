@@ -5,6 +5,7 @@ import os
 import time
 import json 
 
+print('test ge_docker')
 class kurento(unittest.TestCase):
 	"""docstring for kurento"""
 	def setUp(self):
@@ -38,15 +39,15 @@ class kurento(unittest.TestCase):
 		#os.chdir("Docker")
 		os.system('git clone ' + gitclone)
 		os.chdir("kurento-docker/docker")
-		buildKMS1 = buildKMS.replace("run","run -d --name kms -p 8888:8888")
-		os.system(buildKMS1)
-		print('-----------------------------------------------------------')
-		os.system('sudo docker ps -l')
-		print('-----------------------------------------------------------')
-		time.sleep(5)
-		os.system(curl)
-		time.sleep(5)
-		print('-----------------------------------------------------------')
+		#buildKMS1 = buildKMS.replace("run","run -d --name kms -p 8888:8888")
+		#os.system(buildKMS1)
+		#print('-----------------------------------------------------------')
+		#os.system('sudo docker ps')
+		#print('-----------------------------------------------------------')
+		#time.sleep(5)
+		#os.system(curl)
+		#time.sleep(5)
+		#print('-----------------------------------------------------------')
 
 
 		os.chdir('../')
@@ -59,14 +60,14 @@ class kurento(unittest.TestCase):
 		host =  os.popen("hostname")
 		host_name = host.readline()
 
-		resultado = os.popen("docker ps -l").readlines()
-		contenedor =[host_name,fecha,hora,version,resultado[1].split()[10],resultado[1].split()[0],resultado[1].split()[6]]
+		#resultado = os.popen("docker ps").readlines()
+		contenedor =[host_name,fecha,hora,version]
 		#print(version)
 		#print(contenedor)
-		os.system('sudo docker rm kms -f')
+		#os.system('sudo docker rm kms -f')
 
 		f = open('report.txt','w')
-		f.write(contenedor[1]+","+contenedor[2]+","+contenedor[3]+","+contenedor[4]+","+contenedor[5]+","+contenedor[6]+","+contenedor[0])
+		f.write(contenedor[1]+","+contenedor[2]+","+contenedor[3]+","+contenedor[0])
 		
 if __name__=="__main__":
 	#log_file = 'log_file.txt'

@@ -1,0 +1,16 @@
+{
+    "test": "OK", 
+    "version": "7.0.0", 
+    "date": "18-05-03", 
+    "host_name": "gusbgtk-SVE14117FLB", 
+    "time": "23:56:19", 
+    "execution_time": "Ran 1 test in 26.959s", 
+    "GE-name": "wilma", 
+    "containers": [
+        {
+            "status": "Up", 
+            "container_ID": "334a7401aefc", 
+            "container_name": "pep-proxy"
+        }
+    ]
+}

@@ -3,7 +3,6 @@ import os
 import numpy as np
 import test
 
-os.system('clear')
 print('------------- install AuthzForce -------------')
 os.system("python test-GE.py")
 
