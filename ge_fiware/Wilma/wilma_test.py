@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from time import strftime
 import os
 import time
 import unittest
@@ -58,8 +59,8 @@ class Wilma(unittest.TestCase):
 		os.chdir('../')
 		os.chdir('../')
 		
-		date = time.strftime("%y-%m-%d")
-		hour = time.strftime("%H:%M:%S")
+		date = strftime("%y-%m-%d")
+		hour = strftime("%H:%M:%S")
 		
 		host = os.popen('hostname')
 		host_name = host.readline()
