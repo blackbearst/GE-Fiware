@@ -6,22 +6,20 @@ import unittest
 
 class Wilma(unittest.TestCase):
 	def setUp(self):
-		self.driver = webdriver.Remote(
-						command_executor='http://localhost:4444/wd/hub',
-					    desired_capabilities=DesiredCapabilities.CHROME)
+		self.driver = webdriver.Chrome()
 	def test(self):
 		driver = self.driver
 		driver.get("https://github.com/ging/fiware-pep-proxy")
-		branch = driver.find_element_by_xpath('.//*[@id="js-repo-pjax-container"]/div[2]/div[1]/div[5]/div[2]/button').click()
-		version = driver.find_element_by_xpath('.//*[@id="js-repo-pjax-container"]/div[2]/div[1]/div[5]/div[2]/div/div/div[4]/div[1]/a[1]').get_attribute('data-name')
-		tags = driver.find_element_by_xpath('.//*[@id="js-repo-pjax-container"]/div[2]/div[1]/div[5]/div[2]/div/div/div[2]/div[2]/ul/li[2]').click()
-		ver = driver.find_element_by_xpath('.//*[@id="js-repo-pjax-container"]/div[2]/div[1]/div[5]/div[2]/div/div/div[4]/div[1]/a[1]').click()
+		
+		branch = driver.find_element_by_xpath('.//*[@id="js-repo-pjax-container"]/div[2]/div[1]/div[5]/div[1]/button').click()
+		tags = driver.find_element_by_xpath('.//*[@id="js-repo-pjax-container"]/div[2]/div[1]/div[5]/div[1]/div/div/div[2]/div[2]/ul/li[2]').click()
+		version = driver.find_element_by_xpath('.//*[@id="js-repo-pjax-container"]/div[2]/div[1]/div[5]/div[1]/div/div/div[4]/div[1]/a[1]').get_attribute('data-name')	
+		ver = driver.find_element_by_xpath('.//*[@id="js-repo-pjax-container"]/div[2]/div[1]/div[5]/div[1]/div/div/div[4]/div[1]/a[1]').click()
 		clone = driver.find_element_by_xpath('.//*[@id="js-repo-pjax-container"]/div[2]/div[1]/div[5]/details/summary').click()
 		gitclone = driver.find_element_by_xpath('.//*[@id="js-repo-pjax-container"]/div[2]/div[1]/div[5]/details/div/div/div[1]/div[1]/div/input').get_attribute('value')
 		clone = driver.find_element_by_xpath('.//*[@id="js-repo-pjax-container"]/div[2]/div[1]/div[5]/details/summary').click()
 		extras = driver.find_element_by_link_text("extras").click()
-		time.sleep(3)
-
+		time.sleep(3) 
 		docker = driver.find_element_by_link_text("docker").click()
 		time.sleep(3)
 
@@ -66,7 +64,6 @@ class Wilma(unittest.TestCase):
 		
 		resultados = os.popen('docker ps -l') 
 		datos = resultados.readlines()
-		print(datos)
 		containers = [host_name,date,hour,version,datos[1].split()[12],datos[1].split()[0],datos[1].split()[8]]
 		
 		os.system('docker rm -f pep-proxy')
