@@ -1,9 +1,10 @@
-import unittest
 from selenium import webdriver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-import os
+from time import strftime
 import time
+import unittest
 import json 
+import os
 
 class kurento(unittest.TestCase):
 	"""docstring for kurento"""
@@ -53,8 +54,8 @@ class kurento(unittest.TestCase):
 		os.chdir('../')
 		#os.chdir('../')
 		
-		fecha = time.strftime("%y-%m-%d")
-		hora = time.strftime("%H:%M:%S")
+		fecha = strftime("%y-%m-%d")
+		hora = strftime("%H:%M:%S")
 
 		host =  os.popen("hostname")
 		host_name = host.readline()
