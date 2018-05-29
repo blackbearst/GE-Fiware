@@ -1,7 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-import os
+from time import strftime
 import time
+import os
 import json
 import unittest
 
@@ -27,16 +28,16 @@ class orion(unittest.TestCase):
 		print('--------------------------------')
 		#os.system('mkdir Docker | mkdir report')
 		os.system("git clone " + gitclone)
-		os.system("cd fiware-orion/docker && sudo docker-compose up -d")
+		os.system("cd fiware-orion/docker && docker-compose up -d")
 		print('--------------------------------')
-		os.system('sudo docker-compose ps')
+		os.system('docker-compose ps')
 		time.sleep(10)
 		print('--------------------------------')
 		os.system('curl http://localhost:1026/version')
 		print('--------------------------------')
 
-		date = time.strftime("%y-%m-%d")
-		hour = time.strftime("%H:%M:%S")
+		date = strftime("%y-%m-%d")
+		hour = strftime("%H:%M:%S")
 		
 		host = os.popen('hostname')
 		host_name = host.readline()
@@ -45,7 +46,7 @@ class orion(unittest.TestCase):
 		datos = resultados.readlines()
 		
 		containers = [host_name,date,hour,version,datos[1].split()[10],datos[1].split()[0],datos[1].split()[6],datos[2].split()[10],datos[2].split()[0],datos[2].split()[6]]
-		os.system('cd fiware-orion/docker && sudo docker-compose down')
+		os.system('cd fiware-orion/docker && docker-compose down')
 
 		f = open ('report.txt','w')
 		f.write(containers[1]+","+containers[2]+","+containers[3]+","+containers[4]+","+containers[5]+","+containers[6]+","+containers[7]+","+containers[8]+","+containers[9]+","+containers[0])
