@@ -1,3 +1,4 @@
+from collections import OrderedDict
 import numpy as np
 import json
 import os
@@ -10,20 +11,19 @@ test = np.genfromtxt('test.txt',delimiter='\t',dtype=str)
 os.chdir('../')
 os.chdir('report')
 
-reporte = {
-			'GE-name' : "kurento",
-			'host_name' : report[6],
-			'execution_time' : test[2],
-			'test' : test[3], 
-			'date' : report[0],
-			'time' : report[1],
-			'version' : report[2],
-			'containers' : [{
-				'container_name' : report[3],
-				'container_ID' : report[4],
-				'status' : report[5]
-				}]
-			}
+reporte = OrderedDict()
+reporte['GE-name'] = "kurento"
+reporte['Version'] = report[2]
+reporte['Host_name'] = report[6]
+reporte['Test'] = test[len(test)-1]
+reporte['Execution_time'] = test[len(test)-2]
+reporte['Date'] = report[0]
+reporte['Time'] = report[1]
+reporte['Containers'] = OrderedDict()
+reporte['Containers']['Container_name'] = report[3]
+reporte['Containers']['Container_ID'] = report[4]
+reporte['Containers']['Status'] = report[5]
+
 with open('report.json','a') as file:
 			json.dump(reporte, file, indent=2)
 
@@ -39,4 +39,4 @@ print(reporte)
 time.sleep(2)
 
 #os.chdir('../')
-os.system('cd .. && cd Kurento && rm test.txt && rm report.txt') 
+#os.system('cd .. && cd Kurento && rm test.txt && rm report.txt') 
