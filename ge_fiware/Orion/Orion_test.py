@@ -8,8 +8,9 @@ import unittest
 class orion(unittest.TestCase):
 	
 	def setUp(self):
-		self.driver = webdriver.Chrome()
-
+		self.driver = webdriver.Remote(
+				command_executor='http://localhost:4444/wd/hub',
+				desired_capabilities=DesiredCapabilities.CHROME)
 	def test_search_install(self):	
 		driver = self.driver
 		driver.get("https://github.com/telefonicaid/fiware-orion")
