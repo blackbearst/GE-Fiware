@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from time import strftime
 import unittest
 import os
 import time
@@ -59,8 +60,8 @@ class wirecloud(unittest.TestCase):
 		print('--------------------------------')
 		
 
-		date = time.strftime("%y-%m-%d")
-		hour = time.strftime("%H:%M:%S")
+		date = strftime("%y-%m-%d")
+		hour = strftime("%H:%M:%S")
 		
 		host = os.popen('hostname')
 		host_name = host.readline()
