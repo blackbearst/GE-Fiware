@@ -18,7 +18,7 @@ class auth(unittest.TestCase):
 	def test_search_install(self):
 		driver = self.driver
 		driver.get('https://github.com/authzforce/fiware')
-		version = driver.find_element_by_xpath('//*[@id="js-repo-pjax-container"]/div[2]/div[1]/div[5]/div[2]/div/div/div[4]/div[1]/a[1]').get_attribute('data-name')
+		version = driver.find_element_by_xpath('/html/body/div[4]/div/div/div[2]/div[1]/div[5]/div[1]/div/div/div[4]/div[1]/a').get_attribute('data-name')
 		print("version authzforce-ce-server :")
 		print(version)
 		print("")

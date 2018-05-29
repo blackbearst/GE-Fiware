@@ -27,7 +27,7 @@ class knowage(unittest.TestCase):
 		    sleep(1)
 		stdout.write("\n")
 		os.system('curl http://0.0.0.0:8080/knowage')
-		driver.get('http://0.0.0.0:8080/knowage')
+		driver.get('http://localhost:8080/knowage')
 		sleep(15)
 		user = driver.find_element_by_id('userID')
 		password = driver.find_element_by_id('password')

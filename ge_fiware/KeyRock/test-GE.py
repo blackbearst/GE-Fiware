@@ -1,6 +1,5 @@
 import unittest
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from time import sleep,strftime
 from sys import stdout
@@ -18,9 +17,9 @@ class idm(unittest.TestCase):
 	def test_search_install(self):
 		driver = self.driver
 		driver.get('https://github.com/ging/fiware-idm')
-		version = driver.find_element_by_xpath('//*[@id="js-repo-pjax-container"]/div[2]/div[1]/div[5]/div[2]/div/div/div[4]/div[1]/a[1]').get_attribute('data-name')
+		version = driver.find_element_by_xpath('/html/body/div[4]/div/div/div[2]/div[1]/div[4]/div[1]/div/div/div[4]/div[1]/a').get_attribute('data-name')
 		print('version : ' + version)
-		git = driver.find_element_by_xpath('//*[@id="js-repo-pjax-container"]/div[2]/div[1]/div[5]/details/div/div/div[1]/div[1]/div/input').get_attribute('value')
+		git = driver.find_element_by_xpath('/html/body/div[4]/div/div/div[2]/div[1]/div[4]/details/div/div/div[1]/div[1]/div/input').get_attribute('value')
 		os.system('git clone ' + git)
 		os.system('cd ./fiware-idm/extras/docker && docker-compose up -d')
 		sleep(10)
