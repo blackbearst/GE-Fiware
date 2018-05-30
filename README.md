@@ -31,3 +31,33 @@ Si ya había clonado el repositorio previamente y desea actualizarlo deberá pos
  <pre>
  $ git pull
  </pre>
+
+Una vez clonado el directorio “GE-Fiware” para poder hacer uso de Aut-GE-FIWARE, ubicarse dentro del directorio e introducir el siguiente comando:
+ <pre>
+ python index.py
+ </pre>
+Con este comando se iniciara el script index.py el cual incluye las instrucciones para ejecutar cada uno de los scripts que automatiza el despliegue de cada uno de los diferentes GE incluidos en mencionado script.
+
+## Edición:
+Para comodidad del usuario se puede elegir que GE desee desplegar, bastara con abrir el archivo “index.py” y ubicarse en la siguiente sección:
+
+ <pre>
+ os.system('cd ge_fiware/Kurento && python Kurento.py') #run KMS
+ os.system('cd ge_fiware/Orion && python Orion.py') #run Orion
+ os.system('cd ge_fiware/Wirecloud && python Wirecloud.py') #run Wirecloud
+ os.system('cd ge_fiware/Wilma && python Wilma.py') #run Wilma
+ os.system('cd ge_fiware/AuthzForce && python authzforce.py') #run AuthzForce
+ os.system('cd ge_fiware/KeyRock && python keyrock.py') #run KeyRock
+ os.system('cd ge_fiware/Knowage && python knowage.py') #run Knowage
+ </pre>
+En esta sección como se observa están indicados cada uno de los scripts por separado de cada GE, bastara con comentar la línea de código del GE que no queremos que sea ejecutado poniendo un “#” delante de la línea de código.
+
+## Solución de problemas:
+Si una vez iniciado el script “index.py” observa que al desplegar cualquier GE se queda el prompt parpadeando por mucho tiempo sin realizar ninguna acción.
+
+Acceda a su navegador predeterminado e introduzca en la barra de direcciones la siguiente dirección: 
+ <pre>
+ http://localhost:4444
+ </pre>
+Esto lo redireccionará a la página de servicios del contenedor de Selenium el cual es utilizado por los GE para su automatización.
+
