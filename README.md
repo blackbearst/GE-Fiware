@@ -19,3 +19,4 @@ En la siguiente figura se  muestra la estructura de los archivos incluidos en ca
 Para ejecutar Aut-GE-FIWARE es necesario abrir una nueva terminal de comandos. 
 Los scripts están adaptados para evitar el uso de sudo por lo cual es necesario agregar su usuario al grupo de acopladores con el siguiente comando:
 $ sudo usermode –aG docker $USER //Remplazar USER por su usario.
+$ sudo pip install wirecloud
