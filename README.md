@@ -31,10 +31,15 @@ En la terminal se ubicara en la ruta en la cual desee guardar el directorio a cl
  $ git clone https://github.com/blackbearst/GE-Fiware.git
  </pre>
 
-      Si ya había clonado el repositorio previamente y desea actualizarlo deberá posicionarse dentro del directorio “GE-Fiware” e ingresar el siguiente comando:
++ Si ya había clonado el repositorio previamente y desea actualizarlo deberá posicionarse dentro del directorio “GE-Fiware” e ingresar el siguiente comando:
        <pre>
        $ git pull
        </pre>
+<p align="center">
+  <a>
+    <img "extras/img/2_gitpull.png">
+  </a>
+</p>
 
 Una vez clonado el directorio “GE-Fiware” para poder hacer uso de Aut-GE-FIWARE, ubicarse dentro del directorio e introducir el siguiente comando:
  <pre>
