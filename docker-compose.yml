@@ -23,4 +23,4 @@ fiware_report:
     - ./ge_fiware/report:/data/db
   ports: 
     - 27017:27017
-  command: bash -c "mongoimport --db report_fiware --collection fiware --file report.json"
+  #command: bash -c "mongoimport --db report_fiware --collection fiware --file report.json"
