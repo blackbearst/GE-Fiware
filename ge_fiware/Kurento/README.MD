@@ -15,6 +15,3 @@ Los enlaces para instalar kurento se encuentran la sección de documentación y 
 ## Final Evaluation
 Siendo el primer GE instalado, el proceso para la instalación se realizo sin ningún  problema ya que la documentación es explicita, además cuenta con varios ejemplos prácticos bien documentados que nos permiten entender mejor el funcionamiento de este GE.
 
-## Evaluadores
-Torres Salinas Gustavo
-Castillo Texocotitla Samuel
