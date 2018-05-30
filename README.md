@@ -45,6 +45,7 @@ Con este comando se iniciara el script index.py el cual incluye las instruccione
 <p align="center">
     <img src="extras/img/3_gitclone.png">
 </p>
+
 ## Edición:
 Para comodidad del usuario se puede elegir que GE desee desplegar, bastara con abrir el archivo “index.py” y ubicarse en la siguiente sección:
 
@@ -102,34 +103,42 @@ Por último se levanta un tercer servicio el cual es un contenedor con MongDB pa
 
 ## Puertos de contenedores:
 docker-compose.yml
-	Selenium puerto: 4444
-	Mongo puerto: 27017
-	Chrome puerto: null
+-	Selenium puerto: 4444
+-	Mongo puerto: 27017
+-	Chrome puerto: null
 Kurento 
-	Kms puerto: 8888
+-	Kms puerto: 8888
 Orion 
-	Orion pueto: null
-	Mongo puerto: 1026
+-	Orion pueto: null
+-	Mongo puerto: 1026
 Wirecloud
-	Ngnix puerto: 80
-	Postgres puerto: 5432
-	Elasticsearch puerto: null
-	Wirecloud puerto: null
+-	Ngnix puerto: 80
+-	Postgres puerto: 5432
+-	Elasticsearch puerto: null
+-	Wirecloud puerto: null
 Wilma pep proxy
-	Pep-proxy puerto:80
+-	Pep-proxy puerto:80
 Knowage
-	Knowage puerto: 8080
-	My SQL puerto: null
+-	Knowage puerto: 8080
+-	My SQL puerto: null
 KeyRock
-	My SQL puerto: 3306
-	Fiware idm puertos: 3000, 443
+-	My SQL puerto: 3306
+-	Fiware idm puertos: 3000, 443
 AuthzForce
-	AuthzForce puerto: 8080
+-	AuthzForce puerto: 8080
 AEON
-	Mongo puerto: 27017
-	Rabbittmq puertos: 5672, 15672
-	Events puerto: 7789
-	Dashboard puerto: 8080
-	Rest puerto: 3000
+-	Mongo puerto: 27017
+-	Rabbittmq puertos: 5672, 15672
+-	Events puerto: 7789
+-	Dashboard puerto: 8080
+-	Rest puerto: 3000
 
+## Observaciones:
+-	Los tiempos de ejecución varían dependiendo el GE y el equipo host sobre el cual se ejecuta el script.
+-	Si la conexión a internet es lenta tardara en descargar las imágenes correspondientes de los GE en docker.
+-	 La primera corrida tardara más debido a la clonación y descarga de los diferentes repositorios de Github correspondiente a cada GE. 
+## Recomendaciones:
+-	Contar con una conexión a internet rápida y estable.
+-	Contar con las últimas versiones de docker y python.
+-	Verificar que los puertos utilizados por los GE no interfieran con algún contendor ya desplegado en su máquina host.
 
