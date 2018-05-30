@@ -37,7 +37,7 @@ En la terminal se ubicara en la ruta en la cual desee guardar el directorio a cl
        </pre>
 <p align="center">
   <a>
-    <img "extras/img/2_gitpull.png">
+    <img src="extras/img/2_gitpull.png">
   </a>
 </p>
 
@@ -46,7 +46,11 @@ Una vez clonado el directorio “GE-Fiware” para poder hacer uso de Aut-GE-FIW
  python index.py
  </pre>
 Con este comando se iniciara el script index.py el cual incluye las instrucciones para ejecutar cada uno de los scripts que automatiza el despliegue de cada uno de los diferentes GE incluidos en mencionado script.
-
+<p align="center">
+  <a>
+    <img src="extras/img/3_gitclone.png">
+  </a>
+</p>
 ## Edición:
 Para comodidad del usuario se puede elegir que GE desee desplegar, bastara con abrir el archivo “index.py” y ubicarse en la siguiente sección:
 
