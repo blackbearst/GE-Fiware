@@ -9,3 +9,9 @@ GE-Fiware
 •	KeyRock
 •	AuthzForce
 •	AEON
+## Requerimientos de software para la utilización de Aut-GE-FIWARE:
+	Sistema operativo: cualquier distribución de Linux de 64 bits, se recomienda (Ubuntu 16 o versiones posteriores).
+	Docker (necesario agregar su usuario al grupo de acopladores para evitar el uso de sudo junto con los comandos docker).
+	Python.
+## Implementación:
+En la siguiente figura se  muestra la estructura de los archivos incluidos en cada directorio del repositorio de Github.
