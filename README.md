@@ -16,9 +16,7 @@ Este manual tiene como finalidad ayudar a los usuarios interesado en utilizar lo
 ## Implementación:
 En la siguiente figura se  muestra la estructura de los archivos incluidos en cada directorio del repositorio de Github.
 <p align="center">
-  <a>
    <img src="extras/img/1_estructura_proyecto.png">
-  </a>
 </p>
 Para ejecutar Aut-GE-FIWARE es necesario abrir una nueva terminal de comandos. 
 Los scripts están adaptados para evitar el uso de sudo por lo cual es necesario agregar su usuario al grupo de acopladores con el siguiente comando:
@@ -36,9 +34,7 @@ En la terminal se ubicara en la ruta en la cual desee guardar el directorio a cl
        $ git pull
        </pre>
 <p align="center">
-  <a>
     <img src="extras/img/2_gitpull.png">
-  </a>
 </p>
 
 Una vez clonado el directorio “GE-Fiware” para poder hacer uso de Aut-GE-FIWARE, ubicarse dentro del directorio e introducir el siguiente comando:
@@ -47,9 +43,7 @@ Una vez clonado el directorio “GE-Fiware” para poder hacer uso de Aut-GE-FIW
  </pre>
 Con este comando se iniciara el script index.py el cual incluye las instrucciones para ejecutar cada uno de los scripts que automatiza el despliegue de cada uno de los diferentes GE incluidos en mencionado script.
 <p align="center">
-  <a>
     <img src="extras/img/3_gitclone.png">
-  </a>
 </p>
 ## Edición:
 Para comodidad del usuario se puede elegir que GE desee desplegar, bastara con abrir el archivo “index.py” y ubicarse en la siguiente sección:
@@ -67,10 +61,16 @@ En esta sección como se observa están indicados cada uno de los scripts por se
 
 ## Solución de problemas:
 Si una vez iniciado el script “index.py” observa que al desplegar cualquier GE se queda el prompt parpadeando por mucho tiempo sin realizar ninguna acción.
-
+<p align="center">
+    <img src="extras/img/4_promptInactivo.png">
+</p>
 Acceda a su navegador predeterminado e introduzca en la barra de direcciones la siguiente dirección: 
  <pre>
  http://localhost:4444
  </pre>
 Esto lo redireccionará a la página de servicios del contenedor de Selenium el cual es utilizado por los GE para su automatización.
+<p align="center">
+  <img src="extras/img/5_seleniumGrid.png">
+</p>
 
+Ingrese a la opción de <pre> console </pre> y compruebe que el icono de chrome se encuentre activo <img src="extras/img/chromeUp.png">, si se encuentra sombreado significa que el nodo se ha cerrado .
