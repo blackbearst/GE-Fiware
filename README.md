@@ -73,4 +73,4 @@ Esto lo redireccionará a la página de servicios del contenedor de Selenium el 
   <img src="extras/img/5_seleniumGrid.png">
 </p>
 
-Ingrese a la opción de <pre> console </pre> y compruebe que el icono de chrome se encuentre activo <img src="extras/img/chromeUp.png">, si se encuentra sombreado significa que el nodo se ha cerrado .
+Ingrese a la opción de "console" y compruebe que el icono de chrome se encuentre activo <img src="extras/img/chromeUp.png">, si se encuentra sombreado significa que el nodo se ha cerrado <img src="extras/img/chromeDown.png">.
