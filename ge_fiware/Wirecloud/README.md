@@ -6,12 +6,12 @@ Están destinados a aprovechar la "larga cola" de la Web of Services (también c
 Fue muy sencillo desplegar los servicios gracias al docker compose proporcionado en el repositorio de GitHub, vasto con levantar el servicio con el comando docker-compose up –d. 
 
 Note
-✓	Al ejecutar el docker compose se levantan 3 contenedores nginx, wirecloud y pstgres.
-✓	Para comprobar su correcto funcionamiento es necesario ingresar a  http://localhost:80. 
-✓	Se ejecutó el docker-compose ubicado en el directorio docker-wirecloud\hub-docs\docker-compose.yml. 
-✓	Se realizaron las pruebas de extremo a extremo propuestas en la guía del administrador para comprobar su correcto funcionamiento.
-✓	Para ingresar a wirecloud es necesario crear una cuenta de usuario ejecutando el siguiente comando:
+-	Al ejecutar el docker compose se levantan 3 contenedores nginx, wirecloud y pstgres.
+-	Para comprobar su correcto funcionamiento es necesario ingresar a  http://localhost:80. 
+-	Se ejecutó el docker-compose ubicado en el directorio docker-wirecloud\hub-docs\docker-compose.yml. 
+-	Se realizaron las pruebas de extremo a extremo propuestas en la guía del administrador para comprobar su correcto funcionamiento.
+-	Para ingresar a wirecloud es necesario crear una cuenta de usuario ejecutando el siguiente comando:
 docker-compose exec wirecloud manage.py createsuperuser
-✓	Se proporciona una muy buena documentación en https://wirecloud.readthedocs.io/en/latest/.
+-	Se proporciona una muy buena documentación en https://wirecloud.readthedocs.io/en/latest/.
  
  
