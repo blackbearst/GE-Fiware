@@ -18,6 +18,16 @@ En la siguiente figura se  muestra la estructura de los archivos incluidos en ca
 
 Para ejecutar Aut-GE-FIWARE es necesario abrir una nueva terminal de comandos. 
 Los scripts están adaptados para evitar el uso de sudo por lo cual es necesario agregar su usuario al grupo de acopladores con el siguiente comando:
-<pre>
-$ sudo usermode –aG docker $USER //Remplazar USER por su usario.
-</pre>
+ <pre>
+ $ sudo usermode –aG docker $USER //Remplazar USER por su usario.
+ </pre>
+
+En la terminal se ubicara en la ruta en la cual desee guardar el directorio a clonar, introducirá el siguiente comando para clonar el directorio alojado en el repositorio de Github  a su máquina host:
+ <pre>
+ $ git clone https://github.com/blackbearst/GE-Fiware.git
+ </pre>
+
+Si ya había clonado el repositorio previamente y desea actualizarlo deberá posicionarse dentro del directorio “GE-Fiware” e ingresar el siguiente comando:
+ <pre>
+ $ git pull
+ </pre>
