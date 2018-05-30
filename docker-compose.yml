@@ -17,10 +17,10 @@ chrome:
 #  links:
 #  - selenium-hub:hub
 
-#fiware_report: 
- # image: mongo
-  #volumes: 
-  #  - ./ge_fiware/report:/data/db
-  #ports: 
-  #  - 27017:27017
-  #command: bash -c "mongoimport --db report_fiware --collection fiware --file report.json"
+fiware_report: 
+  image: mongo
+  volumes: 
+    - ./ge_fiware/report:/data/db
+  ports: 
+    - 27017:27017
+  command: bash -c "mongoimport --db report_fiware --collection fiware --file report.json"
