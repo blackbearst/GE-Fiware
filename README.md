@@ -1,6 +1,6 @@
 GE-Fiware
 =========
- Este manual tiene como finalidad ayudar a los usuarios interesado en utilizar los scripts ofrecidos en https://github.com/blackbearst/GE-Fiware los cuales han sido diseñados para la automatización y despliegue de los siguientes GE de FIWARE:
+Este manual tiene como finalidad ayudar a los usuarios interesado en utilizar los scripts ofrecidos en https://github.com/blackbearst/GE-Fiware los cuales han sido diseñados para la automatización y despliegue de los siguientes GE de FIWARE:
 -	Kurento
 -	Orion
 -	Wirecloud
@@ -15,7 +15,11 @@ GE-Fiware
 -	Python.
 ## Implementación:
 En la siguiente figura se  muestra la estructura de los archivos incluidos en cada directorio del repositorio de Github.
-
+<p align="center">
+  <a>
+   <img src="extras/img/1_estructura_proyecto.png">
+  </a>
+</p>
 Para ejecutar Aut-GE-FIWARE es necesario abrir una nueva terminal de comandos. 
 Los scripts están adaptados para evitar el uso de sudo por lo cual es necesario agregar su usuario al grupo de acopladores con el siguiente comando:
  <pre>
