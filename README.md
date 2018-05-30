@@ -74,3 +74,62 @@ Esto lo redireccionará a la página de servicios del contenedor de Selenium el 
 </p>
 
 Ingrese a la opción de "console" y compruebe que el icono de chrome se encuentre activo <img src="extras/img/chromeUp.png">, si se encuentra sombreado significa que el nodo se ha cerrado <img src="extras/img/chromeDown.png">.
+<p align="center">
+   <img src="extras/img/6_NodoUpDown.png">
+</p>
+
+Para solucionar este problema:
+1.	Detenga la ejecución del script en la terminal introduciendo el juego de teclas “control + c”.
+2.	En la consola introduzca el siguiente comando:
+   <pre>
+   $ docker-compose down
+   </pre>
+Este comando removerá los contenedores incluidos en el docker-compose.
+3.	Vuelva a iniciar el script con el comando:
+   <pre>
+   $ python index.py
+   </pre>
+<p align="center">
+   <img src="extras/img/7_restartNChrome.png">
+</p>
+
+## Que incluye el docker-compose?
+El docker-compose.yml está diseñado para levantar tres servicios diferentes por un lado  levanta un contenedor Selenium el cual a su vez se conecta con otro contenedor el cual es un nodo de Chrome, si este nodo de chrome se cierra durante la ejecución del script ocasionara que  el prompt se quede pasmado evitando continuar con la ejecución.
+Por último se levanta un tercer servicio el cual es un contenedor con MongDB para guardar los reportes generados por cada una de las pruebas para asegurar la persistencia de los datos.
+<p align="center">
+   <img src="extras/img/8_dockerCompose.png">
+</p>
+
+## Puertos de contenedores:
+docker-compose.yml
+	Selenium puerto: 4444
+	Mongo puerto: 27017
+	Chrome puerto: null
+Kurento 
+	Kms puerto: 8888
+Orion 
+	Orion pueto: null
+	Mongo puerto: 1026
+Wirecloud
+	Ngnix puerto: 80
+	Postgres puerto: 5432
+	Elasticsearch puerto: null
+	Wirecloud puerto: null
+Wilma pep proxy
+	Pep-proxy puerto:80
+Knowage
+	Knowage puerto: 8080
+	My SQL puerto: null
+KeyRock
+	My SQL puerto: 3306
+	Fiware idm puertos: 3000, 443
+AuthzForce
+	AuthzForce puerto: 8080
+AEON
+	Mongo puerto: 27017
+	Rabbittmq puertos: 5672, 15672
+	Events puerto: 7789
+	Dashboard puerto: 8080
+	Rest puerto: 3000
+
+
