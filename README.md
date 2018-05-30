@@ -106,26 +106,34 @@ docker-compose.yml
 -	Selenium puerto: 4444
 -	Mongo puerto: 27017
 -	Chrome puerto: null
+
 Kurento 
 -	Kms puerto: 8888
+
 Orion 
 -	Orion pueto: null
 -	Mongo puerto: 1026
+
 Wirecloud
 -	Ngnix puerto: 80
 -	Postgres puerto: 5432
 -	Elasticsearch puerto: null
 -	Wirecloud puerto: null
+
 Wilma pep proxy
 -	Pep-proxy puerto:80
+
 Knowage
 -	Knowage puerto: 8080
 -	My SQL puerto: null
+
 KeyRock
 -	My SQL puerto: 3306
 -	Fiware idm puertos: 3000, 443
+
 AuthzForce
 -	AuthzForce puerto: 8080
+
 AEON
 -	Mongo puerto: 27017
 -	Rabbittmq puertos: 5672, 15672
