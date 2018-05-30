@@ -2,11 +2,11 @@
 El Cloud Messaging GE (AEON) proporciona servicios en la nube (canales) para comunicar un número ilimitado de entidades, intercambiando una cantidad ilimitada de información. Pero no solo se trata de la comunicación, sino que también brinda servicios para la administración fácil de las entidades que participan en sus entornos: móvil, camión, caja, termómetro, incluso usted mismo).
 El Cloud Messaging GE admite dos bloques de operaciones principales:
 -	Gestión de recursos: gestión de las diferentes entidades y canales.
---	Crear, Eliminar, Actualizar y Eliminar Entidades
---	Crear, eliminar, actualizar y eliminar canales asociados a una entidad
++	Crear, Eliminar, Actualizar y Eliminar Entidades
++	Crear, eliminar, actualizar y eliminar canales asociados a una entidad
 -	Publicar / Suscribir: basado en la gestión de las operaciones de publicación y suscripción.
---	Publicar información en un canal
--- Suscribirse a un canal Detenga, continúe y detenga la suscripción para tener un mejor control de sus operaciones.
++	Publicar información en un canal
++ Suscribirse a un canal Detenga, continúe y detenga la suscripción para tener un mejor control de sus operaciones.
 
 La mensajería en la nube GE ofrece, no solo y la API para administrar todos los recursos, sino también proporciona diferentes SDK para comenzar a usarlosimplemente incluyéndolo en su código.
 
