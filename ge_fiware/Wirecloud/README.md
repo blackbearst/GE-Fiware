@@ -14,4 +14,6 @@ Note
 docker-compose exec wirecloud manage.py createsuperuser
 -	Se proporciona una muy buena documentación en https://wirecloud.readthedocs.io/en/latest/.
  
- 
+## Final Evaluation
+Gracias al docker compose proporcionado en GitHub fue bastante sencillo el despliegue de este habilitador genérico, no se requiere de mayor configuración en algún documento del repositorio, bastará con ejecutar le docker compose y este se encargará de descargar todas las dependencias requeridas.
+
