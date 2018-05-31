@@ -94,7 +94,7 @@ Este comando removerá los contenedores incluidos en el docker-compose.
    <img src="extras/img/7_restartNChrome.png">
 </p>
 
-## Que incluye el docker-compose?
+## ¿Que incluye el docker-compose?
 El docker-compose.yml está diseñado para levantar tres servicios diferentes por un lado  levanta un contenedor Selenium el cual a su vez se conecta con otro contenedor el cual es un nodo de Chrome, si este nodo de chrome se cierra durante la ejecución del script ocasionara que  el prompt se quede pasmado evitando continuar con la ejecución.
 Por último se levanta un tercer servicio el cual es un contenedor con MongDB para guardar los reportes generados por cada una de las pruebas para asegurar la persistencia de los datos.
 <p align="center">
