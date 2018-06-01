@@ -61,29 +61,29 @@ elapsed_time_int = int(elapsed_time)
 #Obteniendo minutos y segundos
 elapsed_time_minutes = elapsed_time_int/60
 elapsed_time_seconds = elapsed_time_int%60
-sleep(3)
+time.sleep(3)
 os.system("cd ..")
-sleep(3)
+time.sleep(3)
 os.system("cd ..")
 
 #print tiempo.total_seconds()
 
 #Formatenado informacion de contenedores
-sleep(10)
+time.sleep(10)
 list_cont = "docker ps -a --no-trunc --format 'table {{.ID}}\t{{.Names}}\t{{.Status}}'"
-sleep(3)
+time.sleep(3)
 list_image = "docker images --no-trunc --format 'table {{.Repository}}\t{{.Tag}}'"
 
 
-sleep(3)
+time.sleep(3)
 #Obteniendo valores de consola
 servicios = subprocess.Popen(list_cont, stdout=subprocess.PIPE, stderr=None, shell=True)
-sleep(3)
+time.sleep(3)
 imagenes = subprocess.Popen(list_image, stdout=subprocess.PIPE, stderr=None, shell=True)
 
-sleep(3)
+time.sleep(3)
 out_cont = servicios.communicate()[0]
-sleep(3)
+time.sleep(3)
 out_image = imagenes.communicate()[0]
 
 cont_spl = out_cont.split()
@@ -96,14 +96,14 @@ ex = 0
 cre = 0
 
 #print out_image
-sleep(3)
+time.sleep(3)
 for i in range(len(image_spl)):
 	if image_spl[i] == 'aeon_dashboard':
 		version = image_spl[i+1]
 
 
 #Host
-sleep(3)
+time.sleep(3)
 host = subprocess.Popen('hostname', stdout=subprocess.PIPE, stderr=None, shell=True)
 usr = host.communicate()[0]
 usuario = usr.split()
@@ -120,7 +120,7 @@ aeon['Date'] = fecha
 aeon['Time'] = hora
 aeon['Version']= version
 aeon['Host'] = usuario[0]
-sleep(3)
+time.sleep(3)
 
 #rest
 #events,rest/events
@@ -160,27 +160,11 @@ os.system("echo  '\n' >> ge.json")
 os.system("cat report.json")
 
 #Deteniendo servicios
-sleep(3)
+time.sleep(3)
 #os.system("sudo docker stop $(sudo docker ps -a -q)")
-os.system("sudo docker stop rest")
-sleep(1)
-os.system("sudo docker stop events,rest/events")
-sleep(1)
-os.system("sudo docker stop events/rabbitmq,rabbitmq,rest/rabbitmq")
-sleep(1)
-os.system("sudo docker stop dashboard,rest/dashboard")
-sleep(1)
-os.system("sudo docker stopevents/mongo,mongo,rest/mongo")
-sleep(3)
 #os.system("sudo docker rm $(sudo docker ps -a -q)")
-os.system("sudo docker rm rest")
-sleep(1)
-os.system("sudo docker rm events,rest/events")
-sleep(1)
-os.system("sudo docker rm events/rabbitmq,rabbitmq,rest/rabbitmq")
-sleep(1)
-os.system("sudo docker rm dashboard,rest/dashboard")
-sleep(1)
-os.system("sudo docker rm events/mongo,mongo,rest/mongo")
+os.chdir("fiware-cloud-messaging-platform/docker")
+os.system("docker-compose down")
+
 
 #Torres Salinas Gustavo
