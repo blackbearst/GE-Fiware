@@ -1,0 +1,29 @@
+<menu></menu>
+<div class="table-responsive">
+  <table class="table table-dark">
+      <thead>
+        <tr>
+          <th>"     "</th>   
+          <th>GE name</th>
+          <th>Version </th>
+          <th>Test</th>
+          <th>Execution time</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Containers</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let geReport of geReports">
+          <td></td>
+          <td>{{geReport.GE_name}}</td>
+          <td>{{geReport.Version}} </td>
+          <td>{{geReport.Test}} </td>
+          <td>{{geReport.Execution_time}} </td>
+          <td>{{geReport.Date}} </td>
+          <td>{{geReport.Time}} </td>
+          <td>{{geReport.Containers}}</td>
+        </tr>
+      </tbody>
+   </table>
+</div>
