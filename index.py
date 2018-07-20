@@ -1,30 +1,30 @@
 import os
 import time
 
-os.system('clear')
+#os.system('clear')
 #install python, selenium and numpy
-print('------------- install numpy and selenium -------------')
+#print('------------- install numpy and selenium -------------')
 
-num = os.popen('python -c "import numpy"')
-numpy = num.readlines()
-numpy = []
-if numpy:
-	os.system('sudo pip install numpy')	
-else:
-	import numpy
-	ver_numpy = numpy.version.version
-	print('version numpy is: ' + ver_numpy)
+#num = os.popen('python -c "import numpy"')
+#numpy = num.readlines()
+#numpy = []
+#if numpy:
+#	os.system('sudo pip install numpy')	
+#else:
+#	import numpy
+#	ver_numpy = numpy.version.version
+#	print('version numpy is: ' + ver_numpy)
 
 	
-sel = os.popen('python -c "import selenium"')
-selenium = sel.readlines()
-selenium = []
-if selenium:
-	os.system('sudo pip install selenium')
-else:
-	import selenium
-	ver_selenium = selenium.__version__
-	print('version selenium is: ' + ver_selenium)
+#sel = os.popen('python -c "import selenium"')
+#selenium = sel.readlines()
+#selenium = []
+#if selenium:
+#	os.system('sudo pip install selenium')
+#else:
+#	import selenium
+#	ver_selenium = selenium.__version__
+#	print('version selenium is: ' + ver_selenium)
 	
 #create dependencies
 os.system('cd ge_fiware && mkdir report && cd report && touch report.json')
@@ -34,8 +34,8 @@ print('------------- status of containers -------------')
 os.system('docker-compose ps')
 time.sleep(5)
 #os.system('cd ge_fiware/Kurento && python Kurento.py') #run KMS
-os.system('cd ge_fiware/Orion && python Orion.py') #run Orion
-os.system('cd ge_fiware/Wirecloud && python Wirecloud.py') #run Wirecloud
+#os.system('cd ge_fiware/Orion && python Orion.py') #run Orion
+#os.system('cd ge_fiware/Wirecloud && python Wirecloud.py') #run Wirecloud
 #os.system('cd ge_fiware/Wilma && python Wilma.py') #run Wilma
 os.system('cd ge_fiware/AuthzForce && python authzforce.py') #run AuthzForce
 #os.system('cd ge_fiware/KeyRock && python keyrock.py') #run KeyRock
