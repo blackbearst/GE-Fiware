@@ -4,11 +4,9 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from time import sleep,strftime
 from sys import stdout
 import os
-import json
-import sys
 
 class idm(unittest.TestCase):
-	"""docstring for idm"""
+	"""docstring for idm git(https://github.com/ging/fiware-idm.git)"""
 	def setUp(self):
 		self.driver = webdriver.Remote(
           command_executor='http://localhost:4444/wd/hub',
@@ -16,11 +14,8 @@ class idm(unittest.TestCase):
 
 	def test_search_install(self):
 		driver = self.driver
-		driver.get('https://github.com/ging/fiware-idm')
-		version = driver.find_element_by_xpath('/html/body/div[4]/div/div/div[2]/div[1]/div[4]/div[1]/div/div/div[4]/div[1]/a').get_attribute('data-name')
-		print('version : ' + version)
-		git = driver.find_element_by_xpath('/html/body/div[4]/div/div/div[2]/div[1]/div[4]/details/div/div/div[1]/div[1]/div/input').get_attribute('value')
-		os.system('git clone ' + git)
+		os.system('cd ./fiware-idm && git pull')
+		version = subprocess.check_output("cd ./fiware-idm && git describe --tags", shell=True).strip()
 		os.system('cd ./fiware-idm/extras/docker && docker-compose up -d')
 		sleep(10)
 		driver.get('http://localhost:3000')
